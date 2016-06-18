@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
-  resources :todo_lists
+  # this was generated when using bin/rails generate controller todo_items index
+  # get 'todo_items/index'
+
+  resources :todo_lists do
+    # this will give different routes to work with.
+    # use bin/rake routes to check different routes the app has
+    # this will enable to the use of "link_to" in index.html.erb
+    resources :todo_items
+  end
+
   root 'todo_lists#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
