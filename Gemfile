@@ -38,6 +38,10 @@ end
 
 group :test do
   gem 'capybara', '~> 2.1.0'
-  gem 'shoulda-matchers', '~> 2.4.0'
+
+  # changed the version from 2.4.0 to 2.6.0 to remove the following warning:
+  # Warning: you should require 'minitest/autorun' instead.
+  # Warning: or add 'gem "minitest"' before 'require "minitest/autorun"'
+  gem 'shoulda-matchers', '~> 2.6.0'
 end
 
