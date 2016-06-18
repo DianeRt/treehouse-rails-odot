@@ -1,0 +1,10 @@
+<!-- it is important to add @todo_list before @todo_item because it is nested
+  under todo_list in the routes.rb file
+-->
+
+<%= form_for [@todo_list, @todo_item] do |form| %>
+  <%= form.label :content %>
+  <%= form.text_field :content %>
+
+  <%= form.submit "Save" %>
+<% end %>
