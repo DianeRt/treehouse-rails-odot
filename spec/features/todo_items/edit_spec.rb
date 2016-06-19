@@ -8,6 +8,9 @@ describe "Editing todo items" do
     visit_todo_list(todo_list)
 
     # todo_item_todo_item.id is pointing to <li id="<%= dom_id(todo_item) %>">
+    # this can use rails_dom_id_helper
+    # replace within("#todo_item_#{todo_item.id}") with:
+    # within dom_id_helper(todo_item)
     within("#todo_item_#{todo_item.id}") do
       click_link "Edit"
     end
