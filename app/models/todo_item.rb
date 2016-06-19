@@ -8,4 +8,8 @@ class TodoItem < ActiveRecord::Base
   # do not forget the comma after each line
   validates :content, presence: true,
                       length: { minimum: 2 }
+
+  def completed?
+    !completed_at.blank?
+  end
 end

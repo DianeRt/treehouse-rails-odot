@@ -5,7 +5,7 @@ describe "Viewing todo items" do
 
   it "displays the title of the todo list" do
     visit_todo_list(todo_list)
-    within("h1.title") do
+    within("h1.todo_list_title") do
       expect(page).to have_content(todo_list.title)
     end
   end
@@ -21,8 +21,7 @@ describe "Viewing todo items" do
 
     visit_todo_list(todo_list)
     
-    # in ul.todo_items, todo_items specifies the class name used in index.html.erb
-    expect(page.all("table.todo_items tr").size).to eq(2)
+    expect(page.all("table.todo_items tbody tr").size).to eq(2)
 
     within "table.todo_items" do
       expect(page).to have_content("Milk")

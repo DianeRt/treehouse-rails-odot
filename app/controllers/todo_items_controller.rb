@@ -48,6 +48,12 @@ class TodoItemsController < ApplicationController
     redirect_to todo_list_todo_items_path
   end
 
+  def complete
+    @todo_item = @todo_list.todo_items.find(params[:id])
+    @todo_item.update_attribute(:completed_at, Time.now)
+    redirect_to todo_list_todo_items_path, notice: "Todo item marked as complete."
+  end
+
   # In order not have to type todo_list everytime inside the controller and view
   # Every single time it's looking for to do list ID.
   # We can give it the ID of the to do list because we already have it.

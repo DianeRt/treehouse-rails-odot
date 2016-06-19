@@ -6,7 +6,11 @@ Rails.application.routes.draw do
     # this will give different routes to work with.
     # use bin/rake routes to check different routes the app has
     # this will enable to the use of "link_to" in index.html.erb
-    resources :todo_items
+    resources :todo_items do
+      member do
+        patch :complete # this is to add an indiviual/custom route
+      end
+    end
   end
 
   root 'todo_lists#index'
