@@ -38,6 +38,16 @@ class TodoItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @todo_item = @todo_list.todo_items.find(params[:id])
+    if @todo_item.destroy
+      flash[:success] = "Todo list item was deleted."
+    else
+      flash[:error] = "Todo list item could not be deleted."
+    end
+    redirect_to todo_list_todo_items_path
+  end
+
   # In order not have to type todo_list everytime inside the controller and view
   # Every single time it's looking for to do list ID.
   # We can give it the ID of the to do list because we already have it.
