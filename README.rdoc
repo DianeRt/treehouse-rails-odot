@@ -1,28 +1,66 @@
-== README
+== {Treehouse Build a Todo List Application with Rails}[https://teamtreehouse.com/library/build-a-todo-list-application-with-rails-4]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+=== About this Course
 
-Things you may want to cover:
+Let's learn Ruby on Rails 4! In this project we'll develop a simple todo list application called ODOT. You'll learn how to create a Rails application, create models. learn associations, and more. By the end of the project, we'll be able to create todo lists, add items to our lists, and edit and mark them complete.
 
-* Ruby version
+=== What you'll learn
 
-* System dependencies
+* Ruby
+* Ruby on Rails
+* Associations
+* Validations
+* Capybara
 
-* Configuration
+=== Build a Todo List Application with Rails 4
 
-* Database creation
+Let's learn Ruby on Rails 4! In this project we'll develop a simple todo list application called ODOT. You'll learn how to create a Rails application, create models. learn associations, and more. By the end of the project, we'll be able to create todo lists, add items to our lists, and edit and mark them complete.
 
-* Database initialization
+=== Steps:
+1. generate rails application
+2. set up Git and add gems
+3. generate a scaffold
+4. write our first tests
+5. validating length
+6. creating method in tests
+7. editing todo lists
+8. deleting todo lists
+9. relationships
+10. viewing todo items: part 1
+11. viewing todo items: part 2
+12. adding todo items
+13. adding validations to todo items
+14. editing todo items
+15. cleaning up our code
+16. deleting todo items
+17. writing test helpers
+18. marking todo items complete
+19. cleaning up our view
+20. viewing todo lists
 
-* How to run the test suite
+=== Commands
+Install gems in Gemfile
 
-* Services (job queues, cache servers, search engines, etc.)
+<code>bundle</code>
 
-* Deployment instructions
+Migrate database
 
-* ...
+<tt>bin/rake db:migrate</tt>
+
+<tt>bin/rake db:migrate RAILS_ENV=test</tt>
+
+Start rails application/server. You can view it in http://localhost:3000
+
+<tt>bin/rails server</tt>
+
+Run all Rspec test with documentation in spec folder 
+
+<tt>bin/rspec --format=documentation spec</tt>
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+=== Resources
+* http://guides.rubyonrails.org/command_line.html
+* http://guides.rubyonrails.org/active_record_validations.html
+* http://guides.rubyonrails.org/association_basics.html
+* https://github.com/thoughtbot/shoulda-matchers
+
